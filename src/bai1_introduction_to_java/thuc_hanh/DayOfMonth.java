@@ -1,4 +1,5 @@
 package bai1_introduction_to_java.thuc_hanh;
+
 import java.util.Scanner;
 
 public class DayOfMonth {
@@ -8,7 +9,7 @@ public class DayOfMonth {
         System.out.println("Which month that you want to count days? ");
         int month = scanner.nextInt();
         String daysInMonth;
-        switch (month){
+        switch (month) {
             case 2:
                 daysInMonth = "28 or 29";
                 break;
