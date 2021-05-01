@@ -10,6 +10,6 @@ public class ChuyenDoiTienTe {
         System.out.println("Mời bạn nhập số tiên USD!");
         usd=scanner.nextDouble();
         double quydoi = usd * 23000;
-        System.out.println("Giá trị VND: " + quydoi);
+        System.out.println("Giá trị VND: " +quydoi );
     }
 }
