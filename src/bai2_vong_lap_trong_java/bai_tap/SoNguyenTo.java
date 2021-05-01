@@ -25,6 +25,6 @@ public class SoNguyenTo {
             }
             N++;
         }
-        System.out.println(s);
+        System.out.println("Dãy gồm 20 số nguyên tố đầu tiên là:" + s);
     }
 }
