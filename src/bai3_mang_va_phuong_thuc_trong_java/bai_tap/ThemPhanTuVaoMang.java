@@ -1,9 +1,8 @@
 package bai3_mang_va_phuong_thuc_trong_java.bai_tap;
 
-import javax.swing.plaf.nimbus.AbstractRegionPainter;
 import java.util.Scanner;
 
-public class XoaPhanTuKhoiMang {
+public class ThemPhanTuVaoMang {
     public static void main(String[] args) {
         int size;
         int[] array;
@@ -25,29 +24,28 @@ public class XoaPhanTuKhoiMang {
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + "\t");
         }
-        System.out.print("\n Nhập số cần xóa: ");
+        System.out.print("\n Nhập phần tử cần thêm vào mảng: ");
         int number;
         Scanner scanner1 = new Scanner(System.in);
         number = scanner1.nextInt();
-        boolean check = false;
-        for (int j = 0; j < array.length; j++) {
-            if (array[j] == (number)) {
-                System.out.println("Số " + number + " có trong mảng array ");
-                System.out.println("Vị trí của phần tử trong mảng array là: " + j);
-                check = true;
-                break;
+        System.out.print("\n Nhập vị trí cần chèn phần tử vào trong mảng: ");
+        int indexDel;
+        Scanner scanner2 = new Scanner(System.in);
+        indexDel = scanner2.nextInt();
+        int[] array2 = new int[array.length + 1];
+        if (indexDel <= 1 && indexDel >= array.length - 1) {
+            System.out.println("Không chèn được phần tử vào mảng");
+        } else {
+            for (int j = 0; j < indexDel; j++) {
+                array2[j] = array[j];
             }
-        }
-        if (!check) {
-            System.out.println("Không có giá trị" + number + " trong mảng array");
-        }
-        if (check) {
-            for (int k = 2; k < array.length - 1; k++) {
-                array[k] = array[k + 1];
+            array2[indexDel] = number;
+            for (int j = indexDel; j < array.length - 1; j++) {
+                array2[j + 1] = array[j];
             }
-            System.out.print("Mảng sau khi đã xóa là: ");
-            for (int j = 0; j < array.length - 1; j++) {
-                System.out.print(array[j] + "\t");
+            System.out.println("Mảng sau khi thêm phần tử là: ");
+            for (int j = 0; j < array2.length; j++) {
+                System.out.print(array2[j] + "\t");
             }
         }
     }
