@@ -14,14 +14,6 @@ public class QuadraticEquationMain {
         System.out.print("Enter the c: ");
         double c = scanner.nextDouble();
         QuadraticEquation quadraticEquation= new QuadraticEquation (a, b, c);
-        System.out.println("Your QuadraticEquation: \n"+ quadraticEquation.display());
-        System.out.println("Discriminant: \n" +quadraticEquation.getDiscriminant());
-        if (quadraticEquation.getDiscriminant()>0){
-            System.out.println("The equation has two roots " + quadraticEquation.getRoot1() + " and" + quadraticEquation.getRoot2());
-        } else if (quadraticEquation.getDiscriminant()==0){
-            System.out.println("The equation has one root " + quadraticEquation.getRoot1());
-        } else {
-            System.out.println("The equation has no real roots");
-        }
+        quadraticEquation.display();
     }
 }
