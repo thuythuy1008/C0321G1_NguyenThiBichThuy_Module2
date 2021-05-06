@@ -17,14 +17,14 @@ public class StopWatchMain {
     }
 
     public static void main(String[] args) {
+        StopWatch stopWatch=new StopWatch();
+        stopWatch.start();
         int[] arr = new int[100000];
         for (int i = 0; i < 100000; i++) {
             arr[i] = (int) (Math.random() * 1000);
         }
-        LocalTime start = LocalTime.now();
         selectionSort(arr);
-        LocalTime end = LocalTime.now();
-        StopWatch stopWatch = new StopWatch(start, end);
+        stopWatch.stop();
         System.out.println("Time: " + stopWatch.getElapsedTime());
     }
 }
