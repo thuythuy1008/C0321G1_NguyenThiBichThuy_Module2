@@ -53,12 +53,9 @@ public class Fan {
 
     public String toString() {
         if (this.on != false) {
-            System.out.println("Fan is on");
-            System.out.println("Speed is: " + speed + " Radius is: " + radius + " and Color is: " + color);
+            return "Fan is on!!! " + "Speed is: " + speed + " Radius is: " + radius + " and Color is: " + color;
         } else {
-            System.out.println("Fan is off");
-            System.out.println("Radius is: " + radius + " and Color is: " + color);
+            return "Fan is off!!! " + "Radius is: " + radius + " and Color is: " + color;
         }
-        return null;
     }
 }
