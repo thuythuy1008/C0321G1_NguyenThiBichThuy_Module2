@@ -52,7 +52,7 @@ public class Point2D {
     public static void main(String[] args) {
         Point2D point2D = new Point2D();
         System.out.println(point2D);
-        System.out.print(" Array: " + Arrays.toString(point2D.getXY()));
+        System.out.println(" Array: " + Arrays.toString(point2D.getXY()));
         Point2D point2D1 = new Point2D(4.0f, 1.0f);
         System.out.println(point2D1);
         System.out.print(" Array: " + Arrays.toString(point2D1.getXY()));

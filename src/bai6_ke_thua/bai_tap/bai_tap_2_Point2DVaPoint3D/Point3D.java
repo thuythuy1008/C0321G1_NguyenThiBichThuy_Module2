@@ -49,7 +49,7 @@ public class Point3D extends Point2D {
     public static void main(String[] args) {
         Point3D point3D = new Point3D();
         System.out.println(point3D);
-        System.out.print(" Array: " + Arrays.toString(point3D.getXYZ()));
+        System.out.println(" Array: " + Arrays.toString(point3D.getXYZ()));
         Point3D point3D1 = new Point3D(3.0f, 6.0f, 2.0f);
         System.out.println(point3D1);
         System.out.print(" Array: " + Arrays.toString(point3D1.getXYZ()));
