@@ -20,12 +20,12 @@ public class Cylinder extends Circle1 {
         return height;
     }
 
-    public double getVolume() {
-        return (height * Math.PI * getRadius() * getRadius());
-    }
-
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    public double getVolume() {
+        return (height * Math.PI * getRadius() * getRadius());
     }
 
     @Override
