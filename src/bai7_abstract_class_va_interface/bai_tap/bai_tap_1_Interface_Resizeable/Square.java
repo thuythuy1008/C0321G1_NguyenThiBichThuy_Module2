@@ -40,8 +40,8 @@ public class Square extends Rectangle implements Resizeable {
     }
 
     @Override
-    public double resize(double percent) {
-        return percent;
+    public void resize1(double percent) {
+        this.setSide(this.getSide() * Math.sqrt(1 + percent / 100));
     }
 
     public static void main(String[] args) {
@@ -52,6 +52,8 @@ public class Square extends Rectangle implements Resizeable {
         System.out.println(square);
 
         square = new Square(5.8, "yellow", true);
+        System.out.println(square);
+        square.resize1(10);
         System.out.println(square);
     }
 }

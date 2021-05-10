@@ -15,9 +15,9 @@ public class ResizeableTest {
             System.out.println(resizeable);
         }
 
-        System.out.println("After resizing: ");
-        for (double resizeable : resizeableTest) {
-            System.out.println(Math.floor(resizeable * circle.resize(Math.random() * 100)));
-        }
+//        System.out.println("After resizing: ");
+//        for (double resizeable : resizeableTest) {
+//            System.out.println(Math.floor(resizeable * circle.resize(Math.random() * 100)));
+//        }
     }
 }

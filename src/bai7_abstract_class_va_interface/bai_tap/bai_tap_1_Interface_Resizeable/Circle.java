@@ -40,8 +40,8 @@ public class Circle extends Shape implements Resizeable {
     }
 
     @Override
-    public double resize(double percent) {
-        return percent;
+    public void resize1(double percent) {
+        this.setRadius(this.getRadius()*Math.sqrt(1+percent/100));
     }
 
     public static void main(String[] args) {
