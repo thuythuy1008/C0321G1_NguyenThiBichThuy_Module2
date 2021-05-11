@@ -1,5 +1,7 @@
 package bai9_danh_sach.bai_tap;
 
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MyList<E> {
@@ -24,9 +26,46 @@ public class MyList<E> {
     }
 
     public E get(int i) {
-        if (i>= size || i <0) {
-            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i );
+        if (i >= size || i < 0) {
+            throw new IndexOutOfBoundsException("Index: " + i + ", Size " + i);
         }
         return (E) elements[i];
     }
+
+
+//    public MyList(int capacity) {
+//
+//    }
+//
+//    public E remove(int i) {
+//
+//    }
+//
+//    public int size() {
+//        return size();
+//    }
+//
+//    public E clone() {
+//
+//    }
+//
+//    public boolean contains(E o) {
+//
+//    }
+//
+//    public int indexOf(E o) {
+//
+//    }
+//
+//    public void add(int i, E e) {
+//
+//    }
+//
+//    public void ensureCapacity(int minCapacity) {
+//
+//    }
+//
+//    public void clear() {
+//
+//    }
 }
