@@ -17,26 +17,15 @@ public class Square extends Rectangle implements Resizeable {
     }
 
     public void setSide(double side) {
-        setWidth(side);
-        setLength(side);
-    }
 
-    @Override
-    public void setWidth(double width) {
-        setSide(width);
-    }
-
-    @Override
-    public void setLength(double length) {
-        setSide(length);
+        super.setWidth(side);
+        super.setLength(side);
     }
 
     @Override
     public String toString() {
         return "A Square with side="
-                + getSide()
-                + ", which is a subclass of "
-                + super.toString();
+                + getSide();
     }
 
     @Override
@@ -45,15 +34,10 @@ public class Square extends Rectangle implements Resizeable {
     }
 
     public static void main(String[] args) {
-        Square square = new Square();
+        Square square = new Square(2.3);
         System.out.println(square);
 
-        square = new Square(2.3);
-        System.out.println(square);
-
-        square = new Square(5.8, "yellow", true);
-        System.out.println(square);
         square.resize1(10);
-        System.out.println(square);
+        System.out.println("After resizing: " + square);
     }
 }

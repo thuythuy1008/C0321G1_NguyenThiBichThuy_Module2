@@ -34,25 +34,20 @@ public class Circle extends Shape implements Resizeable {
     @Override
     public String toString() {
         return "A Circle with radius="
-                + getRadius()
-                + ", which is a subclass of "
-                + super.toString();
+                + getRadius();
     }
 
     @Override
     public void resize1(double percent) {
-        this.setRadius(this.getRadius()*Math.sqrt(1+percent/100));
+        this.setRadius(this.getRadius() * Math.sqrt(1 + percent / 100));
     }
 
     public static void main(String[] args) {
-        Circle circle = new Circle();
+        Circle circle = new Circle(3.5);
         System.out.println(circle);
 
-        circle = new Circle(3.5);
-        System.out.println(circle);
-
-        circle = new Circle(3.5, "indigo", false);
-        System.out.println(circle);
+        circle.resize1(10);
+        System.out.println("After resizing: " + circle);
     }
 
 

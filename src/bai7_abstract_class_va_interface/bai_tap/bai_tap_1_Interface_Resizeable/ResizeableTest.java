@@ -16,11 +16,13 @@ public class ResizeableTest {
         }
 
         System.out.println("After resizing: ");
-        Resizeable []resizeable ={circle,rectangle,square};
+        Resizeable[] resizeable = {circle, rectangle, square};
         for (Resizeable resizeable1 : resizeable) {
-           if(resizeable1 instanceof Resizeable){
-               resizeable1.resize1(Math.floor(Math.random()*100));
-           }
+            if (resizeable1 instanceof Resizeable) {
+//               resizeable1.resize1(20);
+                resizeable1.resize1(Math.floor(Math.random() * 100));
+                System.out.println(resizeable1);
+            }
         }
     }
 }

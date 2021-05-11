@@ -47,25 +47,20 @@ public class Rectangle extends Shape implements Resizeable {
         return "A Rectangle with width="
                 + getWidth()
                 + " and length="
-                + getLength()
-                + ", which is a subclass of "
-                + super.toString();
+                + getLength();
     }
 
     @Override
     public void resize1(double percent) {
-        this.setWidth(this.getWidth()*Math.sqrt(1+percent/100));
-        this.setLength((this.getWidth()*Math.sqrt(1+percent/100))*this.getLength()/this.getWidth());
+        this.setWidth(this.getWidth() * Math.sqrt(1 + percent / 100));
+        this.setLength((this.getWidth() * Math.sqrt(1 + percent / 100)) * this.getLength() / this.getWidth());
     }
 
     public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle();
+        Rectangle rectangle = new Rectangle(2.3, 5.8);
         System.out.println(rectangle);
 
-        rectangle = new Rectangle(2.3, 5.8);
-        System.out.println(rectangle);
-
-        rectangle = new Rectangle(2.5, 3.8, "orange", true);
-        System.out.println(rectangle);
+        rectangle.resize1(10);
+        System.out.println("After resizing: " + rectangle);
     }
 }
