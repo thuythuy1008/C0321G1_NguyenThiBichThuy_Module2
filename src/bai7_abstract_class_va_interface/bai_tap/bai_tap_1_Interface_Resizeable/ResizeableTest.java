@@ -2,26 +2,30 @@ package bai7_abstract_class_va_interface.bai_tap.bai_tap_1_Interface_Resizeable;
 
 public class ResizeableTest {
     public static void main(String[] args) {
-        Circle circle = new Circle(2.0);
-        Rectangle rectangle = new Rectangle(2.0, 3.0);
-        Square square = new Square(4.0);
-        double[] resizeableTest = new double[3];
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle(2.0);
+        shapes[1] = new Rectangle(2.0, 3.0);
+        shapes[2] = new Square(4.0);
 
         System.out.println("Before resizing: ");
-        resizeableTest[0] = circle.getArea();
-        resizeableTest[1] = rectangle.getArea();
-        resizeableTest[2] = square.getArea();
-        for (double resizeable : resizeableTest) {
-            System.out.println(resizeable);
+        for (Shape shape : shapes) {
+            if (shape instanceof Circle) {
+                System.out.println(((Circle) shape).getArea());
+            } else {
+                System.out.println(((Rectangle) shape).getArea());
+            }
         }
 
         System.out.println("After resizing: ");
-        Resizeable[] resizeable = {circle, rectangle, square};
-        for (Resizeable resizeable1 : resizeable) {
-            if (resizeable1 instanceof Resizeable) {
-//               resizeable1.resize1(20);
-                resizeable1.resize1(Math.floor(Math.random() * 100));
-                System.out.println(resizeable1);
+        for (Shape shape : shapes) {
+            if (shape instanceof Circle) {
+                ((Circle) shape).resize1(10);
+//                ((Circle) shape).resize1(Math.floor(Math.random()*100));
+                System.out.println(((Circle) shape).getArea());
+            } else {
+                ((Rectangle) shape).resize1(10);
+//                ((Rectangle) shape).resize1(Math.floor(Math.random()*100));
+                System.out.println(((Rectangle) shape).getArea());
             }
         }
     }

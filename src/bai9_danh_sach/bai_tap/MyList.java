@@ -1,7 +1,5 @@
 package bai9_danh_sach.bai_tap;
 
-
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MyList<E> {
@@ -13,16 +11,71 @@ public class MyList<E> {
         elements = new Object[DEFAULT_CAPACITY];
     }
 
+    public MyList(int capacity) {
+        elements = new Object[capacity];
+    }
+
+    public void add(E o) {
+        size += 1;
+        elements[size - 1] = o;
+    }
+
+    public E remove(int i) {
+        if (i >= 0 && i < size) {
+            for (; i < size; i++) {
+                elements[i] = elements[i + 1];
+            }
+            size -= 1;
+        }
+        return (E) elements;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public MyList<E> clone() {
+        return this;
+    }
+
+    public boolean contains(E o) {
+        for (Object x : elements) {
+            if (o.equals(x)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int indexOf(E o) {
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     private void ensureCapa() {
         int newSize = elements.length * 2;
         elements = Arrays.copyOf(elements, newSize);
     }
 
-    public void add(E e) {
-        if (size == elements.length) {
+    public boolean add(int index, E e) {
+        if (index >= 0 && index <= size) {
+            size += 1;
             ensureCapa();
+            for (int i = size - 2; i >= index; i--) {
+                elements[i + 1] = elements[i];
+            }
+            elements[index] = e;
+            return true;
         }
-        elements[size++] = e;
+        return false;
+    }
+
+    public void ensureCapacity(int minCapacity) {
+        elements = Arrays.copyOf(elements, minCapacity);
     }
 
     public E get(int i) {
@@ -32,40 +85,8 @@ public class MyList<E> {
         return (E) elements[i];
     }
 
-
-//    public MyList(int capacity) {
-//
-//    }
-//
-//    public E remove(int i) {
-//
-//    }
-//
-//    public int size() {
-//        return size();
-//    }
-//
-//    public E clone() {
-//
-//    }
-//
-//    public boolean contains(E o) {
-//
-//    }
-//
-//    public int indexOf(E o) {
-//
-//    }
-//
-//    public void add(int i, E e) {
-//
-//    }
-//
-//    public void ensureCapacity(int minCapacity) {
-//
-//    }
-//
-//    public void clear() {
-//
-//    }
+    public void clear() {
+        elements = new Object[DEFAULT_CAPACITY];
+        size = 0;
+    }
 }
