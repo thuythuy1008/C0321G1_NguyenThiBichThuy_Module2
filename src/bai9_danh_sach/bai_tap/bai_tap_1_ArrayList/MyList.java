@@ -1,4 +1,4 @@
-package bai9_danh_sach.bai_tap;
+package bai9_danh_sach.bai_tap.bai_tap_1_ArrayList;
 
 import java.util.Arrays;
 
