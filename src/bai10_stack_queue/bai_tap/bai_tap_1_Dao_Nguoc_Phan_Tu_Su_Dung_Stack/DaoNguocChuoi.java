@@ -6,7 +6,7 @@ public class DaoNguocChuoi {
     public static void main(String[] args) {
         String string = "Mỗi ngày đến trường là một ngày vui";
         String[] stringArr = string.split(" ");
-        System.out.println("Chuỗi ban đàu là: " + string);
+        System.out.println("Chuỗi ban đầu là: " + string);
 
         Stack<String> stringReverse = new Stack<>();
         for (String i : stringArr) {
