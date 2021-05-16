@@ -1,4 +1,4 @@
-package bai10_stack_queue.bai_tap_Optional_To_Chuc_Du_Lieu_Hop_Ly_Demerging_Su_Dung_Queue;
+package bai10_stack_queue.bai_tap.bai_tap_Optional_To_Chuc_Du_Lieu_Hop_Ly_Demerging_Su_Dung_Queue;
 
 public class Personnel implements Comparable<Personnel> {
     private String name;
