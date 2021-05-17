@@ -25,7 +25,7 @@ public class DemSoLanXuatHien {
         Set<String> keySet = map1.keySet();
         System.out.println("Số lần xuất hiện của mỗi từ trong chuỗi là: ");
         for (String key : keySet) {
-            System.out.println(key + " - " + map1.get(key));
+            System.out.println(key + " : " + map1.get(key));
         }
     }
 }
