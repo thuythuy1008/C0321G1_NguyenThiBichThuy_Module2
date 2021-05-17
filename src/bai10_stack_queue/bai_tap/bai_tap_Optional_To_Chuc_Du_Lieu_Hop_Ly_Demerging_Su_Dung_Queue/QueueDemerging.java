@@ -1,7 +1,5 @@
 package bai10_stack_queue.bai_tap.bai_tap_Optional_To_Chuc_Du_Lieu_Hop_Ly_Demerging_Su_Dung_Queue;
 
-import bai10_stack_queue.bai_tap.bai_tap_Optional_To_Chuc_Du_Lieu_Hop_Ly_Demerging_Su_Dung_Queue.Personnel;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,14 +22,15 @@ public class QueueDemerging {
                 }
             }
         }
-        System.out.println("Mảng sắp xếp theo ngày tháng năm sinh: " + Arrays.toString(personnels));
+        System.out.println("Mảng sắp xếp theo ngày tháng năm sinh: ");
+        System.out.println(Arrays.toString(personnels));
         return personnels;
     }
 
     public static void main(String[] args) {
         Personnel[] personnels = listPersonnel();
-        Queue male = new ArrayDeque();
-        Queue female = new ArrayDeque();
+        Queue<Personnel> male = new ArrayDeque();
+        Queue<Personnel> female = new ArrayDeque();
 
         for (Personnel personnel : personnels) {
             if (personnel.getGender().equals("Nam")) {
@@ -43,10 +42,10 @@ public class QueueDemerging {
 
         ArrayList<Personnel> listSort = new ArrayList<>();
         while (!female.isEmpty()) {
-            listSort.add((Personnel) female.remove());
+            listSort.add(female.remove());
         }
         while (!male.isEmpty()) {
-            listSort.add((Personnel) male.remove());
+            listSort.add(male.remove());
         }
 
         System.out.println("Danh sách sắp xếp theo ngày tháng năm sinh và giới tính: ");
