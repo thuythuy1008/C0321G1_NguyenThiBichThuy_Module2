@@ -1,4 +1,4 @@
-package bai12_thuat_toan_tim_kiem.bai_tap;
+package bai12_thuat_toan_tim_kiem.bai_tap.bai_tap_1_Tim_Chuoi_Tang_Dan_Co_Do_Dai_Lon_Nhat;
 
 import java.util.LinkedList;
 import java.util.Scanner;
