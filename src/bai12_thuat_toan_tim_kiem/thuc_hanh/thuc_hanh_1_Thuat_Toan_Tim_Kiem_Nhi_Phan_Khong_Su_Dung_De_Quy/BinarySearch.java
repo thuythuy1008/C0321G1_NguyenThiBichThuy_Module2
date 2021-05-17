@@ -1,4 +1,4 @@
-package bai12_thuat_toan_tim_kiem.thuc_hanh;
+package bai12_thuat_toan_tim_kiem.thuc_hanh.thuc_hanh_1_Thuat_Toan_Tim_Kiem_Nhi_Phan_Khong_Su_Dung_De_Quy;
 
 public class BinarySearch {
     static int[] list = {2, 4, 7, 10, 11, 45, 50, 59, 60, 66, 69, 70, 79};
