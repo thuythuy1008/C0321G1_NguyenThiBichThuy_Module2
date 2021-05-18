@@ -31,14 +31,14 @@ public class Queue<E> {
         }
     }
 
-    public E deQueue() {
+    public int deQueue() {
         if (this.front == this.rear) {
             this.front = this.rear = null;
         } else {
             this.front = this.front.next;
             this.rear.next = this.front;
         }
-        return this.front.getData();
+        return 0;
     }
 
     public boolean isEmpty() {

@@ -12,5 +12,9 @@ public class TestQueue {
         queue.deQueue();
         System.out.println("Hàng đợi sau khi xóa là: ");
         queue.displayQueue();
+
+        queue.deQueue();
+        queue.deQueue();
+        queue.displayQueue();
     }
 }
