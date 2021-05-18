@@ -23,12 +23,15 @@ public class InsertionSortByStep {
     public static void insertionSortByStep(int[] list) {
         int pos, x;
         for (int i = 1; i < list.length; i++) {
-            System.out.println("Gán x = " + list[i] + " và pos = " + i);
+            System.out.println("X = " + list[i] + " and Pos = " + i);
             x = list[i];
             pos = i;
+
             while (pos > 0 && x < list[pos - 1]) {
-                System.out.println("Đổi chỗ " + list[pos] + " với " + list[pos - 1]);
+                System.out.println("Swap " + list[pos] + " with " + list[pos - 1]);
+                int temp = list[pos];
                 list[pos] = list[pos - 1];
+                list[pos - 1] = temp;
                 pos--;
             }
             list[pos] = x;
