@@ -24,13 +24,14 @@ public class CheckPalindrome {
         boolean check = true;
         for (int i = 0; i < stack.size(); i++) {
             if (stack.get(i) != (((LinkedList) queue).get(i))) {
-                System.out.println("Chuỗi không phải là chuỗi đối xứng!!!");
                 check = false;
                 break;
             }
         }
         if (check) {
             System.out.println("Chuỗi là chuỗi đối xứng!!!");
+        } else {
+            System.out.println("Chuỗi không phải là chuỗi đối xứng!!!");
         }
     }
 }

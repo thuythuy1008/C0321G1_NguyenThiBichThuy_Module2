@@ -4,29 +4,17 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class CheckBracket {
-    private static final char LEFT_BRACKET = '(';
-    private static final char RIGHT_BRACKET = ')';
-
     public static boolean checkBracket(String str) {
         Stack<Character> stack = new Stack<>();
-        if (str.isEmpty()) {
-            return false;
-        } else {
-            for (int i = 0; i < str.length(); i++) {
-                char sym = str.charAt(i);
-                if (sym == LEFT_BRACKET) {
-                    stack.push(sym);
-                } else if (sym == RIGHT_BRACKET) {
-                    if (stack.isEmpty()) {
-                        return false;
-                    } else {
-                        char left = stack.peek();
-                        if (sym == RIGHT_BRACKET && left == LEFT_BRACKET) {
-                            stack.pop();
-                        } else {
-                            return false;
-                        }
-                    }
+        for (int i = 0; i < str.length(); i++) {
+            char sym = str.charAt(i);
+            if (sym == '(') {
+                stack.push(sym);
+            } else if (sym == ')') {
+                if (stack.isEmpty()) {
+                    return false;
+                } else {
+                    stack.pop();
                 }
             }
         }
@@ -38,5 +26,16 @@ public class CheckBracket {
         System.out.println("Nhập vào một chuỗi: ");
         String string = in.nextLine();
         System.out.println(checkBracket(string));
+
+//        String string = "s * (s – a) * (s – b) * (s – c)";
+//        String string1 = "(– b + (b2 – 4*a*c)^0.5) / 2*a ";
+//        String string2 = "s * (s – a) * (s – b * (s – c)";
+//        String string3= "s * (s – a) * s – b) * (s – c)";
+//        String string4 = "(– b + (b^2 – 4*a*c)^(0.5/ 2*a))";
+//        System.out.println(checkBracket(string));
+//        System.out.println(checkBracket(string1));
+//        System.out.println(checkBracket(string2));
+//        System.out.println(checkBracket(string3));
+//        System.out.println(checkBracket(string4));
     }
 }
