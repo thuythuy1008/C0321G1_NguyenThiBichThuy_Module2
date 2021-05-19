@@ -1,18 +1,18 @@
-package bai11_java_collection_framework.bai_tap;
+package bai11_java_collection_framework.bai_tap.bai_tap_Luyen_Tap_Su_Dung_ArrayList_Va_LinkedList;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.Scanner;
 
-public class ProductManagerOfLinkedList {
-    LinkedList<Product> list = new LinkedList<>();
+public class ProductManagerOfArrayList {
+    ArrayList<Product> list = new ArrayList<>();
 
-    public LinkedList<Product> getList() {
+    public ArrayList<Product> getList() {
         return list;
     }
 
-    public void setList(LinkedList<Product> list) {
+    public void setList(ArrayList<Product> list) {
         this.list = list;
     }
 

@@ -1,4 +1,4 @@
-package bai11_java_collection_framework.bai_tap;
+package bai11_java_collection_framework.bai_tap.bai_tap_Luyen_Tap_Su_Dung_ArrayList_Va_LinkedList;
 
 public class Test {
     public static void main(String[] args) {

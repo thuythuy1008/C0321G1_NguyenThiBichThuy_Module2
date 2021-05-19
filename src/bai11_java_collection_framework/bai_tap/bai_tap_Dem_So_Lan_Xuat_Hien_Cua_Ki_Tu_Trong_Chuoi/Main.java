@@ -1,4 +1,4 @@
-package bai11_java_collection_framework.bai_tap.bai_tap_Dem_So_Lan_Xuat_Hien__Cua_Ki_Tu_Trong_Chuoi;
+package bai11_java_collection_framework.bai_tap.bai_tap_Dem_So_Lan_Xuat_Hien_Cua_Ki_Tu_Trong_Chuoi;
 
 import java.util.Iterator;
 import java.util.Map;
