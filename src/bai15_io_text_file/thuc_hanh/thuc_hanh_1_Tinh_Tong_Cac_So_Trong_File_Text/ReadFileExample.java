@@ -1,9 +1,6 @@
 package bai15_io_text_file.thuc_hanh.thuc_hanh_1_Tinh_Tong_Cac_So_Trong_File_Text;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 
 public class ReadFileExample {
