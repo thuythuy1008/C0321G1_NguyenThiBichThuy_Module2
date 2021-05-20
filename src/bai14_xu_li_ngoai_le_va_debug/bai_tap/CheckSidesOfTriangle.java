@@ -19,7 +19,7 @@ public class CheckSidesOfTriangle {
         try {
             RightTriangle rightTriangle = new RightTriangle(a, b, c);
         } catch (IllegalRightTriangleException e) {
-            System.out.println(e.getString());
+            System.err.println(e.getString());
         }
     }
 }
