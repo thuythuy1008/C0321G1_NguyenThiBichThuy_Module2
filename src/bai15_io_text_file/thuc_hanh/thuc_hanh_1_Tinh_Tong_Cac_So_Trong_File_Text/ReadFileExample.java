@@ -31,9 +31,12 @@ public class ReadFileExample {
     }
 
     public static void main(String[] args) {
-        System.out.println("Nhập đường dẫn file: ");
-        Scanner scanner = new Scanner(System.in);
-        String path = scanner.nextLine();
+//        System.out.println("Nhập đường dẫn file: ");
+//        Scanner scanner = new Scanner(System.in);
+//        String path = scanner.nextLine();
+
+        String path = "src\\bai15_io_text_file\\thuc_hanh\\thuc_hanh_1_Tinh_Tong_Cac_So_Trong_File_Text\\text.txt";
+//        String path ="src\\bai15_io_text_file\\thuc_hanh\\thuc_hanh_1_Tinh_Tong_Cac_So_Trong_File_Text\\text1.txt";
 
         ReadFileExample readfileEx = new ReadFileExample();
         readfileEx.readFileText(path);
