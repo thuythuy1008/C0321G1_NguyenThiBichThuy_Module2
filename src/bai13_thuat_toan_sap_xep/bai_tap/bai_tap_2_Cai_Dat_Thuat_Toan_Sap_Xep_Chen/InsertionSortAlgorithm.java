@@ -1,6 +1,6 @@
 package bai13_thuat_toan_sap_xep.bai_tap.bai_tap_2_Cai_Dat_Thuat_Toan_Sap_Xep_Chen;
 
-public class InsertionSort {
+public class InsertionSortAlgorithm {
     static int[] list = {22, 3, -10, 15, 0, 1, -2, 36, 4, 2};
 
     public static void insertionSort(int[] array) {

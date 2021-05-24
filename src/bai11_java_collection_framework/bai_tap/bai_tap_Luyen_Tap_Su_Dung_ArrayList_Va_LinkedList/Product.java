@@ -1,13 +1,18 @@
 package bai11_java_collection_framework.bai_tap.bai_tap_Luyen_Tap_Su_Dung_ArrayList_Va_LinkedList;
 
-public class Product {
+import java.util.Comparator;
+
+public class Product implements Comparable<Product> {
     private int id;
-    private String name;
+    private String nameProduct;
     private int price;
 
-    public Product(int id, String name, int price) {
+    public Product() {
+    }
+
+    public Product(int id, String nameProduct, int price) {
         this.id = id;
-        this.name = name;
+        this.nameProduct = nameProduct;
         this.price = price;
     }
 
@@ -19,12 +24,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNameProduct() {
+        return nameProduct;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
     }
 
     public int getPrice() {
@@ -38,7 +43,12 @@ public class Product {
     @Override
     public String toString() {
         return "Id: " + id + "\t" +
-                "Name: " + name + "\t" +
+                "NameProduct: " + nameProduct + "\t" +
                 "Price: " + price + "\t";
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return (int) (this.getPrice() - o.getPrice());
     }
 }

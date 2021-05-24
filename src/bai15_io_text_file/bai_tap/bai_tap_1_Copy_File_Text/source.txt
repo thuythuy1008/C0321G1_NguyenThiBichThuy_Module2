@@ -1,0 +1,26 @@
+package text;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Text {
+    public static void main(String [] args) throws IOException {
+            Map<String, String> map = new TreeMap<>();
+            map.put("abc", "abc");
+            map.put("12d", "kljaskdjaks");
+            map.put("Bbc", "Bbc");
+            map.put("12a", "12a");
+            map.put("12b", "12b");
+            map.put("Abc", "Abc");
+            map.put("12c", "12c");
+            map.put("641", "641");
+            map.put("A12", "A12");
+            map.put("g4a", "g4a");
+            for (Map.Entry<String, String> v : map.entrySet()) {
+                System.out.println(v.getKey().hashCode());
+            }
+            System.out.println();
+        }
+    }
+}
