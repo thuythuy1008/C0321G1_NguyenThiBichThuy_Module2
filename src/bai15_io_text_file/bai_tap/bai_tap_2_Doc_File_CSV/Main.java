@@ -6,45 +6,35 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        BufferedReader br = null;
         try {
             String line;
-            br = new BufferedReader(new FileReader("src\\bai15_io_text_file\\bai_tap\\bai_tap_2_Doc_File_CSV\\countries.csv"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("src\\bai15_io_text_file\\bai_tap\\bai_tap_2_Doc_File_CSV\\countries.csv"));
 
-            while ((line = br.readLine()) != null) {
-                printCountry(parseCsvLine(line));
+            while ((line = bufferedReader.readLine()) != null) {
+                display(readLine(line));
             }
-
+            bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (br != null)
-                    br.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 
-    public static List<String> parseCsvLine(String csvLine) {
-        List<String> result = new ArrayList<>();
-        if (csvLine != null) {
-            String[] splitData = csvLine.split(",");
-            for (int i = 0; i < splitData.length; i++) {
-                result.add(splitData[i]);
+    public static List<String> readLine(String line) {
+        List<String> listCountry = new ArrayList<>();
+        if (line != null) {
+            String[] strings = line.split(",");
+            for (int i = 0; i < strings.length; i++) {
+                listCountry.add(strings[i]);
             }
         }
-        return result;
+        return listCountry;
     }
 
-    private static void printCountry(List<String> country) {
+    private static void display(List<String> country) {
         System.out.println(
-                "Country [id= "
-                        + country.get(0)
-                        + ", code= " + country.get(1)
-                        + " , name=" + country.get(2)
+                "Đất nước [Mã : " + country.get(0)
+                        + ", Tên viết tắt : " + country.get(1)
+                        + " , Tên đất nước : " + country.get(2)
                         + "]");
     }
 }

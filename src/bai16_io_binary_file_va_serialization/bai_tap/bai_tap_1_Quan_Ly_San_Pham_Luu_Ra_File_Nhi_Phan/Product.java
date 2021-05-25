@@ -7,31 +7,17 @@ public class Product implements Serializable {
     private String name;
     private String manufacturer;
     private int price;
+    private String discription;
 
     public Product() {
     }
 
-    public Product(int id, String name, String manufacturer, int price) {
+    public Product(int id, String name, String manufacturer, int price, String discription) {
         this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getManufacturer() {
-        return manufacturer;
-    }
-
-    public int getPrice() {
-        return price;
+        this.discription = discription;
     }
 
     public void setId(int id) {
@@ -50,6 +36,30 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public void setDiscription(String discription) {
+        this.discription = discription;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getDiscription() {
+        return discription;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -57,6 +67,7 @@ public class Product implements Serializable {
                 ", name='" + name + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
                 ", price=" + price +
+                ", discription='" + discription + '\'' +
                 '}';
     }
 }

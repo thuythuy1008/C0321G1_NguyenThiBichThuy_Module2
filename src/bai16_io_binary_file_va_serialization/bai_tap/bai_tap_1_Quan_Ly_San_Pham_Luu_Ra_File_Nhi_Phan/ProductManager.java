@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductManager {
-    public static List<Product> listProduct = new ArrayList<>();
     private static Scanner input = new Scanner(System.in);
 
     public static void writeToFile(String path, List<Product> listProduct) {
@@ -23,15 +22,16 @@ public class ProductManager {
 
     static void add(ArrayList<Product> listProduct) {
         System.out.println("Nhập mã của sản phẩm: ");
-        int id = input.nextInt();
-        input.nextLine();
+        int id = Integer.parseInt(input.nextLine());
         System.out.println("Nhập tên sản phẩm: ");
         String name = input.nextLine();
         System.out.println("Nhập hãn sản xuất: ");
         String manufacturer = input.nextLine();
         System.out.println("Nhập giá sản phẩm:");
-        int price = input.nextInt();
-        Product product1 = new Product(id, name, manufacturer, price);
+        int price = Integer.parseInt(input.nextLine());
+        System.out.println("Miêu tả sản phẩm: ");
+        String discription = input.nextLine();
+        Product product1 = new Product(id, name, manufacturer, price, discription);
         listProduct.add(product1);
         writeToFile("src\\bai16_io_binary_file_va_serialization\\bai_tap\\bai_tap_1_Quan_Ly_San_Pham_Luu_Ra_File_Nhi_Phan\\sanPham.txt", listProduct);
         display(listProduct);
@@ -57,7 +57,6 @@ public class ProductManager {
             System.out.println(product);
         }
     }
-
 
     static void search(ArrayList<Product> listProduct) {
         System.out.println("Nhập tên sản phẩm bạn muốn tìm kiếm");
